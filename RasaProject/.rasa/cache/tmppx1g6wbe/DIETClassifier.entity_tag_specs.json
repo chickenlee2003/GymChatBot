@@ -1,0 +1,20 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-type_id",
+      "2": "I-type_id",
+      "3": "L-type_id",
+      "4": "U-type_id",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-type_id": 1,
+      "I-type_id": 2,
+      "L-type_id": 3,
+      "U-type_id": 4,
+      "O": 0
+    },
+    "num_tags": 5
+  }
+]

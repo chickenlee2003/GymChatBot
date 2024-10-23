@@ -1,0 +1,31 @@
+pip install rasa
+
+rasa init
+
+rasa train
+
+rasa run --enable-api
+
+
+**Tạo controller
+
+**Tạo Config
+
+**Tạo Frontend
+
+**Nếu có security thì nhớ cho phép chat
+
+**Sử dụng chat có truy xuất cơ sở dữ liệu
+pip install rasa-sdk requests
+
+Bật 2 terminal cùng lúc: 
+  rasa run actions
+  rasa run --enable-api
+
+
+  giờ là 
+  rasa run
+  rasa run actions
+
+Hiển thị lên trong actions thì lưu ý      /n 
+

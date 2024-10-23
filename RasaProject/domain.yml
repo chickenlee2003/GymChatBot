@@ -1,0 +1,74 @@
+version: "3.1"
+  
+intents:
+  - greet
+  - goodbye
+  - ask_about_opening_hours
+  - ask_about_closing_hours
+  - ask_about_membership
+  - ask_about_trainer
+  - ask_about_facilities
+  - ask_about_contact
+  - ask_about_pricing
+  - ask_about_schedule
+  - ask_about_discounts
+  - ask_about_tech
+  - ask_about_branches
+  - ask_about_service_types
+  - get_fitness_package_by_type:
+      use_entities:
+        - type_id
+
+
+responses:
+  utter_greet:
+  - text: "Chào bạn! cảm ơn bạn đã quan tâm đến phòng Gym. Bạn có điều gì cần giải đáp mình sẽ giúp bạn nhé!"
+
+  utter_goodbye:
+  - text: "Cảm ơn bạn đã quan tâm. Nếu cần thêm thông tin bạn hãy liên hệ với chúng tôi nhé!"
+
+  utter_ask_about_opening_hours:
+  - text: "Phòng tập mở cửa từ 6h sáng đến 10h tối."
+
+  utter_ask_about_closing_hours:
+  - text: "Phòng tập đóng cửa từ 10h tối đến 6h sáng."
+
+  utter_ask_about_membership:
+  - text: "Gym gôm nhiều gói tập như Gym, Yoga, Aerobic, Zumba, và nhiều hơn nữa. Bạn có thể chọn gói tập phù hợp với nhu cầu của mình."
+
+  utter_ask_about_trainer:
+  - text: "PT có đầy đủ kinh nghiệm và chuyên môn. Bạn có thể thuê PT và đặt lịch tập trực tiếp với Pt khi mua gói tập."
+
+  utter_ask_about_facilities:
+  - text: "Cơ sở vật chất của chúng tôi bao gồm nhiều thiết bị hiện đại tiên tiến, phòng tập rộng rãi và thoáng mát. Bạn sẽ có môi trường tập luyện thoải mái và hiệu quả."
+
+  utter_ask_about_contact:
+  - text: "Liên hệ với chúng tôi qua số điện thoại 0852915699 hoặc duyduy01@gmail.com."
+
+  utter_ask_about_pricing:
+  - text: "Chúng tôi cung cấp nhiều gói giá cả linh hoạt, phù hợp với mọi nhu cầu."
+
+  utter_ask_about_discounts:
+  - text: "Hiện tại, chúng tôi có các ưu đãi đặc biệt cho thành viên mới và chương trình giảm giá khi giới thiệu đăng ký."
+
+  utter_about_tech:
+  - text: "Phòng Gym có nhiều thiết bị hiện đại và ứng dụng công nghệ nhận diện khuôn mặt, quét mã QR, và theo dõi sức khoẻ."
+
+entities:
+  - type_id  # Bắt lấy type_id từ người dùng
+
+slots:
+  type_id:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: type_id
+
+
+actions:
+  - action_ask_about_branches
+  - action_fetch_service_types
+  - action_fetch_fitness_packages_by_type
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

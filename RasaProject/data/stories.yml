@@ -1,0 +1,22 @@
+version: "3.1"
+stories:
+- story:  ask about branches
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_about_branches
+  - action: action_ask_about_branches
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: ask about service types
+  steps:
+    - intent: ask_about_service_types
+    - action: action_fetch_service_types
+
+- story:  ask about service types with id
+  steps:
+    - intent: get_fitness_package_by_type  # Ý định của người dùng
+      entities:
+        - type_id: "1"  # Giá trị mẫu, thay bằng type_id thực tế
+    - action: action_fetch_fitness_packages_by_type

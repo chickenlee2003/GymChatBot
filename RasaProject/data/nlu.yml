@@ -1,0 +1,171 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - Chào
+      - Xin chào
+      - Hello
+      - Hi
+
+  - intent: goodbye
+    examples: |
+      - Tạm biệt
+      - Hẹn gặp lại
+      - Goodbye
+      - Bye
+
+  - intent: ask_about_opening_hours
+    examples: |
+      - Giờ mở cửa là khi nào?
+      - Khi nào phòng tập mở cửa?
+      - Giờ mở cửa của phòng tập?
+      - mấy giờ mở cửa?
+
+  - intent: ask_about_closing_hours
+    examples: |
+      - Giờ đóng cửa là khi nào?
+      - Khi nào phòng tập đóng cửa?
+      - Giờ đóng cửa của phòng tập?
+      - mấy giờ đóng cửa?
+
+  - intent: ask_about_membership
+    examples: |
+      - Thông tin về gói tập
+      - Các gói gói tập
+      - Gói tập có những quyền lợi gì?
+      - Tôi muốn biết về gói tập
+      - Các gói tập có gì?
+      - khi mua gói tập được gì
+
+  - intent: ask_about_trainer
+    examples: |
+      - Thông tin về huấn luyện viên
+      - Huấn luyện viên có kinh nghiệm không?
+      - Ai sẽ là huấn luyện viên của tôi?
+      - tôi muốn biết về huấn luyện viên
+      - Huấn luyện viên có chuyên môn không?
+      - Huấn luyện viên có kinh nghiệm không?
+      - Huấn luyện viên có tay nghề không?
+
+  - intent: ask_about_facilities
+    examples: |
+      - Cơ sở vật chất như thế nào?
+      - Phòng tập có những gì?
+      - Thông tin về cơ sở vật chất
+      - Cơ sở vật chất của phòng tập  
+      - Cơ sở vật chất của phòng tập như thế nào?
+      - Phòng tập có những thiết bị gì?
+      - Phòng tập có những thiết bị hiện đại không?
+      - Phòng tập có những thiết bị tiên tiến không?
+
+  - intent: ask_about_contact
+    examples: |
+      - Liên hệ với phòng tập như thế nào?
+      - Số điện thoại của phòng tập là gì?
+      - Tôi muốn biết thông tin liên hệ
+      - kết nối với phòng tập như thế nào
+      - liên hệ với phòng tập như thế nào
+      - tìm hiểu về phòng tập
+
+  - intent: ask_about_pricing
+    examples: |
+      - Giá cả như thế nào?
+      - Các gói giá cả
+      - Thông tin về giá cả
+      - Giá cả của phòng tập
+      - Phòng tập có giá cả như thế nào?
+      - giá các gói tập
+      - giá cả của các gói tập
+
+  - intent: ask_about_schedule
+    examples: |
+      - Lịch trình tập luyện như thế nào?
+      - Tôi muốn biết lịch trình tập luyện
+      - Lịch trình của phòng tập
+      - lịch tập xem ở đâu
+      - lịch trình tập luyện như thế nào
+      - lịch trình tập luyện của phòng tập
+
+  - intent: ask_about_discounts
+    examples: |
+      - Có chương trình giảm giá không?
+      - Các ưu đãi hiện tại
+      - Thông tin về giảm giá
+      - Giảm giá của phòng tập
+      - Phòng tập có chương trình giảm giá không?
+      - giảm giá của phòng tập
+      - giảm giá của các gói tập
+
+  - intent: ask_about_tech
+    examples: |
+      - Công nghệ sử dụng
+      - Phòng tập sử dụng công nghệ gì?
+      - Công nghệ tiên tiến
+      - Công nghệ hiện đại
+      - Công nghệ sử dụng ở phòng tập
+      - Công nghệ tiên tiến sử dụng ở phòng tập
+      - phòng gym này có gì đặc biệt không
+      - phòng gym này sử dụng công nghệ gì
+      - các điều đặc biệt về phòng gym này
+      - phòng gym này có gì đặc biệt
+      - phòng gym này sử dụng công nghệ gì tiên tiến
+      
+  - intent: ask_about_branches
+    examples: |
+      - Có bao nhiêu chi nhánh của phòng tập?
+      - Phòng tập có bao nhiêu chi nhánh?
+      - Có mấy chi nhánh của phòng tập?
+      - Địa chỉ của phòng tập ở đâu?
+      - Phòng tập có chi nhánh ở đâu?
+      - Hiện tại phòng tập có mấy chi nhánh?
+  - intent: ask_about_service_types
+    examples: |
+      - Phòng tập cung cấp dịch vụ gì?
+      - Dịch vụ của phòng tập
+      - Phòng tập có những dịch vụ gì?
+      - Dịch vụ của phòng tập bao gồm những gì?
+      - Phòng tập có những loại dịch vụ nào?
+      - Có các thể loại gói tập nào
+      - Các thể loại gói tập
+      - Phòng tập có những loại gói tập nào?
+
+
+  - intent: get_fitness_package_by_type
+    examples: |
+      - Tôi muốn xem gói dịch vụ của loại [GYM](type_id)
+      - Cho tôi xem gói dịch vụ loại [YOGA](type_id)
+      - Gói dịch vụ nào có ID là [1](type_id)?
+      - Có những gói nào thuộc loại [ZUMBA](type_id)?
+      - Hiển thị các gói tập thuộc loại [AEROBIC](type_id)
+      - Các gói thuộc dịch vụ [CARDIO](type_id) là gì?
+      - Dịch vụ có mã là [2](type_id)
+      - Dịch vụ có ID [3](type_id) là gì?
+
+  # - intent: ask_how_to_view_account
+  #   examples: |
+  #     - Làm sao để xem thông tin tài khoản?
+  #     - Tôi có thể xem thông tin tài khoản ở đâu?
+  #     - Hướng dẫn tôi cách xem thông tin tài khoản
+  #     - Thông tin tài khoản của tôi ở đâu?
+  #     - Xem thông tin tài khoản như thế nào?
+
+  # - intent: ask_how_to_edit_account
+  #   examples: |
+  #     - Làm sao để cachỉnh sửa thông tin tài khoản?
+  #     - Tôi có thể thay đổi thông tin tài khoản như thế nào?
+  #     - Hướng dẫn cách chỉnh sửa tài khoản
+  #     - Làm thế nào để cập nhật thông tin tài khoản của tôi?
+  #     - Thay đổi thông tin tài khoản ra sao?
+  #     - Thay đổi ngày sinh?
+  #     - Thay đổi email?
+  #     - Thay đổi họ tên?
+
+  # - intent: ask_how_to_change_password
+  #   examples: |
+  #     - Làm sao để đổi mật khẩu?
+  #     - Tôi muốn thay đổi mật khẩu, phải làm sao?
+  #     - Hướng dẫn cách đổi mật khẩu
+  #     - Thay đổi mật khẩu như thế nào?
+  #     - Tôi có thể cập nhật mật khẩu ở đâu?
+  #     - Đổi mật khẩu như thế nào?

@@ -1,0 +1,57 @@
+version: "3.1"
+
+rules:
+  - rule: Greet the user
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  - rule: Say goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - rule: Answer opening hours
+    steps:
+      - intent: ask_about_opening_hours
+      - action: utter_ask_about_opening_hours
+
+  - rule: Answer closing hours
+    steps:
+      - intent: ask_about_closing_hours
+      - action: utter_ask_about_closing_hours
+
+  - rule: Answer membership details
+    steps:
+      - intent: ask_about_membership
+      - action: utter_ask_about_membership
+
+  - rule: Answer trainer details
+    steps:
+      - intent: ask_about_trainer
+      - action: utter_ask_about_trainer
+
+  - rule: Answer facilities details
+    steps:
+      - intent: ask_about_facilities
+      - action: utter_ask_about_facilities
+
+  - rule: Answer contact details
+    steps:
+      - intent: ask_about_contact
+      - action: utter_ask_about_contact
+
+  - rule: Answer pricing details
+    steps:
+      - intent: ask_about_pricing
+      - action: utter_ask_about_pricing
+
+  - rule: Answer discounts details
+    steps:
+      - intent: ask_about_discounts
+      - action: utter_ask_about_discounts
+
+  - rule: Provide tech information
+    steps:
+      - intent: ask_about_tech
+      - action: utter_about_tech
